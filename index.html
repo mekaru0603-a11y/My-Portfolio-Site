@@ -1,11 +1,293 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <!-- ── Fixed Header ── -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#top" class="header-name">Your <em>Name</em></a>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="#works"   class="hnav-link" data-target="works">Works</a>
+        <a href="#about"   class="hnav-link" data-target="about">About</a>
+        <a href="#process" class="hnav-link" data-target="process">Process</a>
+        <a href="#contact" class="hnav-link" data-target="contact">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="メニュー" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── Mobile Nav Drawer ── -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <a href="#works"   class="drawer-link" data-target="works">Works</a>
+    <a href="#about"   class="drawer-link" data-target="about">About</a>
+    <a href="#process" class="drawer-link" data-target="process">Process</a>
+    <a href="#contact" class="drawer-link" data-target="contact">Contact</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ══ Hero ══ -->
+    <section class="hero" aria-label="ヒーロー">
+      <div class="hero-inner">
+        <p class="hero-sub">Art Direction &amp; Web Design</p>
+        <h1 class="hero-name">Your<br><em>Name</em></h1>
+        <p class="hero-desc">
+          ブランドのビジョンを視覚言語に変換する<br>
+          アートディレクター / Webディレクター
+        </p>
+        <a href="#works" class="hero-cta">View Works <span class="cta-arrow">↓</span></a>
+      </div>
+      <div class="hero-deco" aria-hidden="true">
+        <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="240" cy="240" r="200" stroke-width="0.5"/>
+          <circle cx="240" cy="240" r="140" stroke-width="0.5"/>
+          <circle cx="240" cy="240" r="80"  stroke-width="0.5"/>
+          <line x1="40"  y1="240" x2="440" y2="240" stroke-width="0.5"/>
+          <line x1="240" y1="40"  x2="240" y2="440" stroke-width="0.5"/>
+          <line x1="98"  y1="98"  x2="382" y2="382" stroke-width="0.5"/>
+          <line x1="382" y1="98"  x2="98"  y2="382" stroke-width="0.5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ══ Works ══ -->
+    <section class="section" id="works" aria-label="作品一覧">
+      <div class="section-head">
+        <span class="section-label">Works</span>
+        <span class="section-num">06 projects</span>
+      </div>
+
+      <div class="works-grid">
+
+        <article class="work-item">
+          <div class="work-thumb work-thumb--1">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+              <line x1="32" y1="96"  x2="288" y2="96"  stroke-width="0.6"/>
+              <line x1="32" y1="128" x2="224" y2="128" stroke-width="0.6"/>
+              <line x1="32" y1="160" x2="144" y2="160" stroke-width="0.6"/>
+            </svg>
+          </div>
+          <div class="work-info">
+            <span class="work-num">01</span>
+            <h3 class="work-title">Brand Identity A</h3>
+            <span class="work-cat">Brand Identity</span>
+          </div>
+          <div class="work-hover-overlay">
+            <span class="hover-label">View Project →</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-thumb work-thumb--2">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+              <rect x="48" y="40" width="224" height="160" fill="none" stroke-width="0.6"/>
+              <rect x="80" y="72" width="160" height="96"  fill="none" stroke-width="0.6"/>
+              <circle cx="160" cy="120" r="28" fill="none" stroke-width="0.6"/>
+            </svg>
+          </div>
+          <div class="work-info">
+            <span class="work-num">02</span>
+            <h3 class="work-title">Web Direction B</h3>
+            <span class="work-cat">Web Direction</span>
+          </div>
+          <div class="work-hover-overlay">
+            <span class="hover-label">View Project →</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-thumb work-thumb--3">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+              <line x1="32" y1="80"  x2="144" y2="80"  stroke-width="0.6"/>
+              <line x1="32" y1="120" x2="288" y2="120" stroke-width="0.6"/>
+              <line x1="32" y1="160" x2="208" y2="160" stroke-width="0.6"/>
+            </svg>
+          </div>
+          <div class="work-info">
+            <span class="work-num">03</span>
+            <h3 class="work-title">Editorial Design C</h3>
+            <span class="work-cat">Editorial Design</span>
+          </div>
+          <div class="work-hover-overlay">
+            <span class="hover-label">View Project →</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-thumb work-thumb--4">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="160" cy="120" r="80" fill="none" stroke-width="0.6"/>
+              <circle cx="160" cy="120" r="40" fill="none" stroke-width="0.6"/>
+              <line x1="32"  y1="120" x2="288" y2="120" stroke-width="0.6"/>
+              <line x1="160" y1="16"  x2="160" y2="224" stroke-width="0.6"/>
+            </svg>
+          </div>
+          <div class="work-info">
+            <span class="work-num">04</span>
+            <h3 class="work-title">Art Direction D</h3>
+            <span class="work-cat">Art Direction</span>
+          </div>
+          <div class="work-hover-overlay">
+            <span class="hover-label">View Project →</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-thumb work-thumb--5">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+              <line x1="32" y1="152" x2="288" y2="152" stroke-width="0.6"/>
+              <line x1="32" y1="120" x2="208" y2="120" stroke-width="0.6"/>
+              <line x1="32" y1="88"  x2="128" y2="88"  stroke-width="0.6"/>
+            </svg>
+          </div>
+          <div class="work-info">
+            <span class="work-num">05</span>
+            <h3 class="work-title">Campaign E</h3>
+            <span class="work-cat">Campaign</span>
+          </div>
+          <div class="work-hover-overlay">
+            <span class="hover-label">View Project →</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-thumb work-thumb--6">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+              <rect x="48" y="96" width="224" height="48" fill="none" stroke-width="0.6"/>
+              <line x1="48" y1="120" x2="272" y2="120" stroke-width="0.6"/>
+            </svg>
+          </div>
+          <div class="work-info">
+            <span class="work-num">06</span>
+            <h3 class="work-title">Brand Site F</h3>
+            <span class="work-cat">Brand Site</span>
+          </div>
+          <div class="work-hover-overlay">
+            <span class="hover-label">View Project →</span>
+          </div>
+        </article>
+
+      </div><!-- /.works-grid -->
+    </section>
+
+    <!-- ══ About ══ -->
+    <section class="section section--alt" id="about" aria-label="プロフィール">
+      <div class="section-head">
+        <span class="section-label">About</span>
+      </div>
+      <div class="about-layout">
+        <div class="about-left">
+          <h2 class="about-heading">Designer &amp;<br><em>Art Director</em></h2>
+          <p class="about-body">
+            ブランドのビジョンを視覚言語に変換することを専門とするアートディレクター / Webディレクターです。
+            ラグジュアリー、ファッション、テクノロジー領域のクライアントと協業し、
+            デジタルとフィジカルを横断するクリエイティブを手がけています。
+          </p>
+          <p class="about-body">
+            細部への徹底したこだわりと、コンセプトから実装まで一貫した視点で、
+            ブランドの本質を伝えるデザインを追求しています。
+          </p>
+        </div>
+        <div class="about-right">
+          <div class="skill-list">
+            <div class="skill-row">
+              <span class="skill-label">Art Direction</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+              <span class="skill-pct">92</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-label">Web Direction</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
+              <span class="skill-pct">86</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-label">Brand Design</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              <span class="skill-pct">88</span>
+            </div>
+            <div class="skill-row">
+              <span class="skill-label">UI / App Design</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              <span class="skill-pct">78</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Process ══ -->
+    <section class="section" id="process" aria-label="プロセス">
+      <div class="section-head">
+        <span class="section-label">Process</span>
+      </div>
+      <div class="process-grid">
+        <div class="process-step js-reveal">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Discovery</h3>
+          <p class="step-desc">ブランドの本質・競合環境・ターゲットを深く理解するためのリサーチと対話を行います。</p>
+        </div>
+        <div class="process-step js-reveal">
+          <span class="step-num">02</span>
+          <h3 class="step-title">Concept</h3>
+          <p class="step-desc">収集した情報をもとに、ビジュアル言語のコンセプトと方向性を複数案策定します。</p>
+        </div>
+        <div class="process-step js-reveal">
+          <span class="step-num">03</span>
+          <h3 class="step-title">Design</h3>
+          <p class="step-desc">選定されたコンセプトをもとに、細部まで磨き上げたビジュアルデザインを制作します。</p>
+        </div>
+        <div class="process-step js-reveal">
+          <span class="step-num">04</span>
+          <h3 class="step-title">Deliver</h3>
+          <p class="step-desc">実装チームと緊密に連携しながら、デザインの品質を保ったまま世に送り出します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Contact ══ -->
+    <section class="section section--alt" id="contact" aria-label="お問い合わせ">
+      <div class="section-head">
+        <span class="section-label">Contact</span>
+      </div>
+      <div class="contact-body">
+        <p class="contact-intro">
+          詳細な事例や、お仕事のご相談などございましたら、<br>
+          下記までお気軽にご連絡ください。改めてご返信いたします。
+        </p>
+        <a href="mailto:hello@yourname.me" class="contact-email">hello@yourname.me</a>
+        <div class="contact-socials">
+          <a href="#" class="social-link">Twitter</a>
+          <span class="social-sep">·</span>
+          <a href="#" class="social-link">Instagram</a>
+          <span class="social-sep">·</span>
+          <a href="#" class="social-link">Behance</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <span class="footer-copy">© 2025 Your Name. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="#" class="footer-link">Twitter</a>
+      <a href="#" class="footer-link">Instagram</a>
+      <a href="#" class="footer-link">Behance</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
